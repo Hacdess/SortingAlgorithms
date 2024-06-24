@@ -11,17 +11,6 @@ int FindMax(int* a, int n)
     return max;
 }
 
-int FindMaxWithComparisons(int* a, int n, unsigned long long& count)
-{
-    int max = a[0], i;
-
-    for (i = 1; ++count && i < n; i++)
-        if (++count && a[i] > max)
-            max = i;
-    
-    return max;
-}
-
 void CountingSort(int* a, int n)
 {
     if (n < 2) return;
@@ -49,6 +38,18 @@ void CountingSort(int* a, int n)
 
     delete[] FreqArray;
     delete[] ResArray;
+}
+
+// === With Comparison ===
+int FindMaxWithComparisons(int* a, int n, unsigned long long& count)
+{
+    int max = a[0], i;
+
+    for (i = 1; ++count && i < n; i++)
+        if (++count && a[i] > max)
+            max = i;
+    
+    return max;
 }
 
 unsigned long long CountingSortWithComparisons(int* a, int n)

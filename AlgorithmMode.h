@@ -16,9 +16,11 @@ private:
     string Parameter;
     string FileName = "";
     unsigned long long Comparisons = 0;
+
+    InputOrder order = InputOrder::NONE;
+    OutputParameter para = OutputParameter::NONE;
     
 public:
-
     int* ReadFile(char* FileName);
     void Run(int argc, char *argv[]);
 };

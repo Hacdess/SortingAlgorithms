@@ -19,6 +19,8 @@ void BubbleSort(int *a, int n)
     }
 }
 
+
+// === With Comparison ===
 unsigned long long BubbleSortWithComparisons(int *a, int n)
 {
     unsigned long long count = 0;

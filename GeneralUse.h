@@ -42,3 +42,4 @@ bool isNumber(char* argv);
 string SortingAlgorithmToString(SortingAlgorithm algo);
 string OrderToString(InputOrder order);
 string ParameterToString(OutputParameter para);
+void WriteFile(string FileName, int* a, int n);

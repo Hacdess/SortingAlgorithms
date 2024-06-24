@@ -111,3 +111,23 @@ string ParameterToString(OutputParameter para)
         return "Unknown Parameter";
     }
 }
+
+void WriteFile(string FileName, int* a, int n)
+{
+    ofstream fout(FileName);
+    if (!fout.is_open())
+    {
+        cout << "Can't open file\n";
+        return;
+    }
+
+    fout << n << endl;
+    int i;
+    
+    for (i = 0; i < n - 1; i++)
+        cout << a[i] << ' ';
+    
+    cout << a[i];
+
+    fout.close();
+}
